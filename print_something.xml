@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ServerManagerConfiguration>
+  <ProxyGroup name="sources">
+    <SourceProxy class="vtkPythonProgrammableFilter" label="Print Something" name="Print Something">
+      <InputProperty command="SetInputConnection" name="Input">
+        <ProxyGroupDomain name="groups">
+          <Group name="sources"/>
+          <Group name="filters"/>
+        </ProxyGroupDomain>
+      </InputProperty>
+      <StringVectorProperty command="SetScript" default_values="try:&#10;&#10;    print(&quot;hello, &quot; + Name + ' ' + Surname)&#10;&#10;    result = Int1 + Int2&#10;    print(str(Int1)+ ' + ' + str(Int2) + ' = ' + str(result)) &#10;&#10;    available_colors = [&quot;blue&quot;, &quot;green&quot;, &quot;yellow&quot;, &quot;black&quot;]&#10;    print(&quot;You have chosen the color &quot; + available_colors[Color_index])&#10;&#10;    if Bool: print(&quot;boolean variable is selected&quot;)&#10;    else: print(&quot;boolean variable is unselected&quot;)&#10;&#10;except Exception as e: &#10;    print(&quot;Some errors occurred!&quot;)&#10;    print(e)&#10;" name="Script" number_of_elements="1" panel_visibility="advanced">
+        <Hints>
+          <Widget syntax="python" type="multi_line"/>
+        </Hints>
+      </StringVectorProperty>
+      <Property command="Modified" name="Refresh" panel_widget="command_button" width="5"/>
+      <Hints>
+        <ShowInMenu category="Printing Tools"/>
+      </Hints>
+      <StringVectorProperty command="SetParameter" default_values="YourName" initial_string="Name" label="Name" name="Name" number_of_elements="1" panel_visibility="default">
+        <Documentation>enter here your name</Documentation>
+      </StringVectorProperty>
+      <StringVectorProperty command="SetParameter" default_values="YourSurname" initial_string="Surname" label="Surname" name="Surname" number_of_elements="1" panel_visibility="default">
+        <Documentation>enter here your surname</Documentation>
+      </StringVectorProperty>
+      <IntVectorProperty command="SetParameter" default_values="3" initial_string="Int1" label="Int1" name="Int1" number_of_elements="1" panel_visibility="default">
+        <Documentation>just type an integer</Documentation>
+      </IntVectorProperty>
+      <IntVectorProperty command="SetParameter" default_values="1" initial_string="Color_index" label="Color" name="Color_index" number_of_elements="1" panel_visibility="default">
+        <Documentation>chose your color</Documentation>
+        <EnumerationDomain name="enum">
+          <Entry text="blue" value="0"/>
+          <Entry text="green" value="1"/>
+          <Entry text="yellow" value="2"/>
+          <Entry text="black" value="3"/>
+        </EnumerationDomain>
+      </IntVectorProperty>
+      <IntVectorProperty command="SetParameter" default_values="1" initial_string="Int2" label="Int2" name="Int2" number_of_elements="1" panel_visibility="default">
+        <IntRangeDomain max="14" min="0" name="Int2"/>
+      </IntVectorProperty>
+      <IntVectorProperty command="SetParameter" default_values="0" initial_string="Bool" label="Bool" name="Bool" number_of_elements="1" panel_visibility="advanced">
+        <BooleanDomain name="Bool"/>
+      </IntVectorProperty>
+    </SourceProxy>
+  </ProxyGroup>
+</ServerManagerConfiguration>
