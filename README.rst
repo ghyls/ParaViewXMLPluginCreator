@@ -59,7 +59,7 @@ field and press Apply. The output will be shown on the terminal from where we
 have run ParaView (if we ran it from terminal) or in the "Output Messages"
 window inside ParaView (:menuselection:`View --> Output Messages`).
 
-.. figure:: images/output_message.png
+.. figure:: https://github.com/mariohyls/ParaViewXMLPluginCreator/blob/master/output_message.png
    :align: center
    :alt: The output is shown in "Output Messages" window.
 
@@ -238,7 +238,7 @@ Once the plugin is loaded, run it by clicking :menuselection:`Sources -->
 Printing Tools --> Print something`. The plugin will appear as a source in the
 Pipeline like this:
 
-.. figure:: images/loaded_plugin.png
+.. figure:: https://github.com/mariohyls/ParaViewXMLPluginCreator/blob/master/loaded_plugin.png
    :align: center
    :alt: The plugin is now loaded and visible in the Pipeline
 
@@ -249,7 +249,7 @@ Now we can start playing with the plugin. To run it, press either *Apply* or
 result is as expected. Remember that the bool variable is *hidden* in
 "advanced" options, so we can modify it only by pressing the *gear* button.
 
-.. figure:: images/testing_plugin.png
+.. figure:: https://github.com/mariohyls/ParaViewXMLPluginCreator/blob/master/testing_plugin.png
    :align: center
    :alt: We check that everything works as expected
    
