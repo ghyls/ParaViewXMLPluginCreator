@@ -26,8 +26,8 @@ When we are still writing and debugging the script, it's no worth to generate
 the XML and load it into ParaView each time that we want to test it. The best
 way to do this is by writing on the script some "test" values for the variables
 that will appear on the interface, and pasting the script into a "Programmable
-Source" (or filter), which we can access by clicking :menuselection:`Sources
---> Programmable Source` or :menuselection:`Filters --> Alphabetical -->
+Source" (or filter), which we can access by clicking Sources
+--> Programmable Source` or `Filters --> Alphabetical -->
 Programmable Filter`. Let's work for now with that simple script, that prints
 something related to some integer, string and boolean variables:
 
@@ -57,7 +57,7 @@ something related to some integer, string and boolean variables:
 Once inside  the Programmable Source, we can paste our script on the "Script"
 field and press Apply. The output will be shown on the terminal from where we
 have run ParaView (if we ran it from terminal) or in the "Output Messages"
-window inside ParaView (:menuselection:`View --> Output Messages`).
+window inside ParaView (`View --> Output Messages`).
 
 .. figure:: https://github.com/mariohyls/ParaViewXMLPluginCreator/blob/master/output_message.png
    :align: center
@@ -229,12 +229,12 @@ Running the plugin in ParaView
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We will now test the plugin in ParaView. Once ParaView is opened, load the
-plugin by clicking :menuselection:`Tools --> Manage Plugins... --> Load New`.
+plugin by clicking`Tools --> Manage Plugins... --> Load New`.
 Navigate then to the folder where you have generated the plugin and select it.
 For ParaView 5.4.1, you will have to specify that you are looking for a *xml*
 file. This is no longer necessary in further versions.
 
-Once the plugin is loaded, run it by clicking :menuselection:`Sources -->
+Once the plugin is loaded, run it by clicking `Sources -->
 Printing Tools --> Print something`. The plugin will appear as a source in the
 Pipeline like this:
 
